@@ -1,0 +1,39 @@
+pki:
+  ca: |
+    -----BEGIN NEBULA CERTIFICATE-----
+    CkUKE015b3JnYW5pemF0aW9uLCBJbmMotbHb+wUwtZjgigY6IHF46e3qHlEp4PaB
+    vIhdTAZJnUJykcXoe2UmM65y5mpgQAESQPdWgLU1k7Q7sX8FbA4hTQKJCmX7YCJD
+    PSk+VSiRkGBtTucHbm1z8qlW9RKUC3nJY+2Gxb0ycbJ20GtYftfNtgg=
+    -----END NEBULA CERTIFICATE-----
+  cert: |
+    -----BEGIN NEBULA CERTIFICATE-----
+    CmkKC2hvb2stc2VydmVyEgqCyKGFDID+//8PKPKx2/sFMLSY4IoGOiDg34rD202o
+    /u1sOBtiH2RB3yVMoaACw9AKKWL2+8ypLUogIESNV864nouH+RMjZIXZ07P9aLMd
+    PWOPMNxFi18hWywSQC2mEdTusY8pDBUKsALOeGO/L5oZp8n5cIUYt77AMzJYmjm5
+    g96C+m7aR5Ue1pz1aPuhhBZuvI/2LPXmZ3BhZgg=
+    -----END NEBULA CERTIFICATE-----
+  key: |
+    -----BEGIN NEBULA X25519 PRIVATE KEY-----
+    2XuPC3Q9W+bMwWUmJH8T0EmcAMEiRY7eRvORB8JQiD0=
+    -----END NEBULA X25519 PRIVATE KEY-----
+
+static_host_map:
+  "192.168.100.1": ["127.0.0.1:4001"]
+
+listen:
+  host: 127.0.0.1
+  port: 4002
+
+tun:
+  disabled: true
+
+firewall:
+  outbound:
+    - port: any
+      proto: any
+      host: any
+
+  inbound:
+    - port: 12345
+      proto: any
+      host: any
